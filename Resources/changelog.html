@@ -1,0 +1,1644 @@
+<h3>v2.6.3 - 2020-07-14</h3>
+<h4>Added</h4>
+<ul>
+<li>Added external tool definitions for Beyond Compare 4. (Stefan Knotzer)</li>
+<li>Added option to disable translation. (Stefan Knotzer)</li>
+<li>Added options to delete branches and tags from the commit list context menu. (Stefan Knotzer)</li>
+<li>Added button to the clone dialog to navigate to a local directory. (Stefan Knotzer)</li>
+<li>Added Brazilian Portuguese translation. (Francisco)</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed incorrect setting change when checking the &quot;update submodules after pull&quot; check box.</li>
+<li>Fixed failure to stage some renames. (Maickonn Richard)</li>
+<li>Fixed crash on right-click when a both the status diff and another commit are selected. (Stefan Knotzer)</li>
+<li>Fixed the definition of an identifier in indexed search to include a dash followed a digit.</li>
+<li>(Mac) Fixed failure to load translations.</li>
+</ul>
+<hr />
+<h3>v2.6.2 - 2020-05-03</h3>
+<h4>Added</h4>
+<ul>
+<li>Added Spanish translation. (Gustavo Velasco-Hernandez)</li>
+<li>Added command line flag (--no-translation) to disable automatic loading of translation files.</li>
+<li>Added option to create a squash merge (git merge --squash). (Maickonn Richard)</li>
+<li>Added settings to specify SHH config and key file paths. (Kas)</li>
+<li>Added settings for prompt to stage directories and large files. (Maickonn Richard)</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed crash on Fetch All without an open repo. (Maickonn Richard)</li>
+<li>(Mac) Fixed crash on window close.</li>
+<li>(Linux) Fixed failure to quit from the menu. (Kas)</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Changed layout of diff view to more clearly group hunks with their file.</li>
+<li>(Mac) Quit when the last window is closed.</li>
+</ul>
+<hr />
+<h3>v2.6.1 - 2019-12-26</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed potential crash on adding a remote account from the sidebar.</li>
+<li>Fixed width of ID column in compact history mode for some fonts.</li>
+<li>(Mac) Fixed missing translations for some items in app menu.</li>
+<li>(Mac) Fixed incorrect UI language when English comes before German in list of preferred languages.</li>
+</ul>
+<hr />
+<h3>v2.6.0 - 2019-12-12</h3>
+<h4>Added</h4>
+<ul>
+<li>Added options to automatically prune remote tracking branches on fetch/pull. (Kas)</li>
+<li>Added context menu action to push tags to the default remote. (Kas)</li>
+<li>Added prompt to delete tags (including from the remote). (Kas)</li>
+<li>Added German language translation. (Kas)</li>
+<li>Added theme variables to color the tab bar independently. (Kas)</li>
+<li>Added compact history mode (in the gear popup menu). (Attila Greguss)</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Jump to matching reference on click instead of selection change.</li>
+<li>Fixed possible invalid commit editor message after revert, cherry-pick, etc.</li>
+<li>Fixed inconsistent history list font size on some displays.</li>
+<li>Fixed failure to cancel some remote transfer operations.</li>
+<li>Removed artificial limitation on merging and rebasing with a detached HEAD.</li>
+<li>Fixed crash when merging or rebasing with a detached HEAD. (Kas)</li>
+</ul>
+<hr />
+<h3>v2.5.11 - 2019-10-30</h3>
+<h4>Added</h4>
+<ul>
+<li>Added context menu item to remove remote account from the sidebar.</li>
+<li>Added usage reporting setting to the 'General' preferences panel.</li>
+<li>Remember sidebar remote account expansion state.</li>
+<li>Unique sidebar and open tab names in the same way as recent repositories.</li>
+<li>Added 'Fetch All' item to 'Remote' menu.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed failure to launch external edit tools with spaces in their path.</li>
+<li>Disallow pasting rich text into the commit editor.</li>
+<li>(Win) Fixed several issues relating to symlinks.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Allow more than 99 columns in line length plugin interface.</li>
+<li>Clarify copyright statement in the about dialog.</li>
+<li>(Mac) Enable the hardened runtime to allow notarization on macOS Catalina.</li>
+</ul>
+<hr />
+<h3>v2.5.10 - 2019-08-29</h3>
+<h4>Added</h4>
+<ul>
+<li>Automatically switch between light and dark mode on macOS Mojave when using the native theme.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed stash performance issue.</li>
+<li>Fixed crash on LFS-not-found error.</li>
+<li>Avoid reporting the LFS-not-found error multiple times.</li>
+<li>Fixed possible failure to look up the correct SSH identity file when the config file contains a 'HostName' entry.</li>
+<li>Fixed failure to draw tree view badges in some cases.</li>
+<li>Add missing dark mode colors for some lexers that reference colors directly (e.g. markdown).</li>
+</ul>
+<hr />
+<h3>v2.5.9 - 2019-08-10</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Updated Bitbucket integration to use v2.0 API.</li>
+<li>Avoid opening a new tab for repositories that are already open.</li>
+<li>Changed new branch dialog default start point to the HEAD instead of the first branch in the reference list.</li>
+<li>Fix regression in staging submodules.</li>
+<li>Fix crash on right-click on clean status diff.</li>
+<li>Fix regression in double-clicking to clone a repository.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Changed wording of prompt-to-amend dialog to clarify its purpose.</li>
+</ul>
+<hr />
+<h3>v2.5.8 - 2019-07-17</h3>
+<h4>Added</h4>
+<ul>
+<li>Added menu items and keyboard shortcuts to stage and unstage all files.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed possible crash in merge dialog on action change.</li>
+<li>Fixed performance regression on viewing status diffs with large files.</li>
+<li>(Linux) Fixed input of accented characters when using the compose input method.</li>
+<li>(Linux) Fixed several credential helper issues.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Double-clicking on a repo in the sidebar no longer opens a new tab if the repo is already open.</li>
+<li>Apply &quot;store credentials in secure storage&quot; setting immediately.</li>
+<li>Allow name and date to wrap when the detail view becomes too small to show them side-by-side.</li>
+</ul>
+<hr />
+<h3>v2.5.7 - 2019-05-22</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed possible index corruption.</li>
+</ul>
+<hr />
+<h3>v2.5.6 - 2019-05-16</h3>
+<h4>Added</h4>
+<ul>
+<li>Added option to ignore whitespace in diffs.</li>
+<li>Remember previously opened repository path and use it when opening new repositories.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed failure push a branch to a different remote when it's already up-to-date with its upstream.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Revert to the system list view selection color in the native theme.</li>
+</ul>
+<hr />
+<h3>v2.5.5 - 2019-03-19</h3>
+<h4>Added</h4>
+<ul>
+<li>Added syntax highlighting for SQL and Erlang files.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Reload submodules on refresh and when the HEAD changes.</li>
+<li>Fixed failure to refresh GitHub accounts with more than one page of repositories.</li>
+<li>(Linux) Fixed spurious refresh on modification of some ignored files.</li>
+</ul>
+<hr />
+<h3>v2.5.4 - 2019-02-25</h3>
+<h4>Added</h4>
+<ul>
+<li>Allow checking out remote branches from the commit list.</li>
+<li>Added option to reset remote branch to an existing local branch on checkout.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Quote path arguemnts to filters.</li>
+<li>Fixed crash on 'Find' when no repository is open.</li>
+<li>Fixed file context menu performance issue by enabling navigation items unconditionally.</li>
+<li>Fixed failure to get more than 20 repositories from GitLab.</li>
+<li>Work around lack of support for the 'no_proxy' environment variable in libgit2.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Map 'Refresh' to the platform-specific shortcut.</li>
+</ul>
+<hr />
+<h3>v2.5.3 - 2019-01-24</h3>
+<h4>Added</h4>
+<ul>
+<li>Added support for ed25519 SSH identity files.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed possible crash after starred commits have been added and removed.</li>
+</ul>
+<hr />
+<h3>v2.5.2 - 2019-01-06</h3>
+<h4>Fixed</h4>
+<ul>
+<li>(Win) Fixed status diff performance regression on indexes built with older versions of GitAhead.</li>
+<li>(Win) Fixed installer shortcuts to be relative to the actual install location instead of hard coded to the default location.</li>
+</ul>
+<hr />
+<h3>v2.5.1 - 2018-12-22</h3>
+<h4>Fixed</h4>
+<ul>
+<li>(Win) Restored license agreement to the installer.</li>
+<li>(Win) Avoid restart after the VS redistributable is installed.</li>
+<li>(Mac) Fixed failure to launch on macOS 10.12 and 10.13.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Truncate tool bar badge numbers at 999.</li>
+</ul>
+<hr />
+<h3>v2.5.0 - 2018-12-13</h3>
+<h4>Changed</h4>
+<ul>
+<li>GitAhead is now open source and free for everybody! See the new gitahead.com for details.</li>
+</ul>
+<hr />
+<h3>v2.4.7 - 2018-11-20</h3>
+<h4>Added</h4>
+<ul>
+<li>(Mac) Added basic support for touch bar.</li>
+<li>(Win) Added support for symlinks when core.symlinks=true.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed inverted plus/minus color in default theme.</li>
+<li>Disallow multiple remote accounts of the same kind with the same username.</li>
+</ul>
+<hr />
+<h3>v2.4.6 - 2018-09-26</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed crash on initializing new repository.</li>
+<li>Fixed port conflict with some web servers.</li>
+</ul>
+<hr />
+<h3>v2.4.5 - 2018-09-24</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed performance issues on some large repositories.</li>
+<li>(Mac) Fixed compatibility issues with macOS Mojave.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Changed default merge operation to commit.</li>
+</ul>
+<hr />
+<h3>v2.4.4 - 2018-09-11</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Improved performance on some very large repositories.</li>
+<li>(Win) Fixed regression in looking up credentials in some cases.</li>
+</ul>
+<h3>v2.4.3 - 2018-08-31</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed possible crash on fetch.</li>
+<li>Fixed additional issue in extracting repo name from URL.</li>
+<li>Fixed performance issue when browsing tree view.</li>
+<li>Fixed describe performance issues on very large repositories.</li>
+<li>(Linux) Fixed failure to lookup username from credential helper.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Changed default font sizes slightly.</li>
+<li>Changed external editor setting to set &quot;gui.editor&quot; instead of &quot;core.editor&quot;.</li>
+<li>Changed credential helper implementation to be more consistent with git.</li>
+<li>(Linux) Execute application in context of user's default shell when launched from desktop.</li>
+</ul>
+<hr />
+<h3>v2.4.2 - 2018-08-23</h3>
+<h4>Added</h4>
+<ul>
+<li>Added context menu item to rename branches.</li>
+<li>Added option to set external editor (core.editor).</li>
+<li>Respect GIT_EDITOR, core.editor, VISUAL, and EDITOR (in that order) when editing in an external editor.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed failure to rename branches.</li>
+<li>Fixed clone dialog repo name detection to use everything up to .git.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Moved external tools options into their own settings page.</li>
+</ul>
+<hr />
+<h3>v2.4.1 - 2018-08-17</h3>
+<h4>Added</h4>
+<ul>
+<li>Added option to disable credential storage.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed remote host connection issues.</li>
+</ul>
+<hr />
+<h3>v2.4.0 - 2018-07-20</h3>
+<h4>Added</h4>
+<ul>
+<li>Added empty main window interface for opening repositories.</li>
+<li>Added options to merge dialog to require or disable fast-forward.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed possible file corruption when discarding or staging individual hunks.</li>
+<li>Fixed intermittent invalid status diff and possible crash.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Show repository sidebar by default.</li>
+<li>Allow last tab to be closed.</li>
+<li>Start application with an empty main window instead of repository chooser.</li>
+<li>Remember open tabs when exiting the app by closing the last window.</li>
+</ul>
+<hr />
+<h3>v2.3.7 - 2018-07-10</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed possible hang on start.</li>
+<li>Fixed regression in adding recent repositories with the same name as an existing repository.</li>
+</ul>
+<hr />
+<h3>v2.3.6 - 2018-07-05</h3>
+<h4>Added</h4>
+<ul>
+<li>Added option to stop prompting to stage directories and large files.</li>
+<li>(Beta) Added repository sidebar.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Improved performance of staging a large number of files.</li>
+<li>Added missing [remote rejected] push errors to the log.</li>
+<li>(Win) Copy file paths with native separators.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Increased threshold for prompt to stage large files by a factor of 10.</li>
+</ul>
+<hr />
+<h3>v2.3.5 - 2018-06-21</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed ignore issues on some patterns.</li>
+<li>Fixed performance issue when opening settings dialogs.</li>
+<li>Fixed possible crash on changing window settings after a window has been closed.</li>
+<li>Improve commit list performance when sorting by date and the graph is disabled.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Made the diff view drop shadow more subtle.</li>
+</ul>
+<hr />
+<h3>v2.3.4 - 2018-06-14</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed selection issues and possible crash on reference view filtering.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Don't show the license error dialog on application start when the error is the result of a network error.</li>
+<li>Avoid connecting to remote accounts every time the repository chooser is opened.</li>
+</ul>
+<hr />
+<h3>v2.3.3 - 2018-05-27</h3>
+<h4>Added</h4>
+<ul>
+<li>Added plugin API to get hunk lexer.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed interactivity during rebase.</li>
+<li>Fixed line length plugin issue on some empty lines.</li>
+<li>(Mac) Fixed style regression on macOS native theme.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Disabled most plugin checks on unstyled hunks.</li>
+<li>Automatically add /api/v3 to GitHub Enterprise URLs.</li>
+<li>Removed bundle git-lfs. LFS integration requires git-lfs to be installed separately.</li>
+</ul>
+<hr />
+<h3>v2.3.2 - 2018-05-14</h3>
+<h4>Added</h4>
+<ul>
+<li>Added command line option to populate the pathspec filter.</li>
+<li>Added notes about authentication with GitHub and GitLab by personal access token.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed inverted tab plugin options.</li>
+<li>Disable pull on bare repositories.</li>
+<li>Fixed spurious prompts to decrypt SSH identity file after invalid public key connection error.</li>
+<li>(Win) Fixed treatment of junction points to match command line git.</li>
+</ul>
+<hr />
+<h3>v2.3.1 - 2018-05-03</h3>
+<h4>Added</h4>
+<ul>
+<li>Added context menu item to set or unset the executable mode of files after they have been staged. This is equivalent to the 'git update-index --chmod=(+|-)x' command.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed file discard button to remove directories.</li>
+<li>Fixed trailing whitespace plugin error for files that have multiple line ending characters (e.g. CRLF).</li>
+<li>Fixed file context menu performance issue.</li>
+<li>(Linux) Fixed failure to detect libsecret at runtime on Ubuntu 18.04.</li>
+</ul>
+<hr />
+<h3>v2.3.0 - 2018-05-01</h3>
+<h4>Added</h4>
+<ul>
+<li>Added plugin API to flag errors in diffs.
+<ul>
+<li>Added several built-in plugins.</li>
+<li>API documentation can be found at Help -&gt; Plugin Documentation...</li>
+</ul>
+</li>
+<li>Prompt before staging large binary files.</li>
+<li>Added option to create and clone repositories bare.</li>
+<li>Added option to deinitialize LFS for the repository.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed failure to prompt for HTTPS credentials when the remote URL scheme is 'http'.</li>
+</ul>
+<hr />
+<h3>v2.2.2 - 2018-04-18</h3>
+<h4>Added</h4>
+<ul>
+<li>Added menu item to remove all LFS locks.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed failure to execute LFS filters when git-lfs isn't on the PATH.</li>
+<li>(Win) Fixed indexer crash regression.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Store all commit list options as repository-specific settings instead of global settings.</li>
+<li>Changed the behavior of the reference interface to keep the HEAD as the current reference when 'show all branches' is enabled.</li>
+</ul>
+<hr />
+<h3>v2.2.1 - 2018-04-10</h3>
+<h4>Added</h4>
+<ul>
+<li>Added size label for binary files in the diff view.</li>
+<li>Added before and after version of images in the diff view.</li>
+<li>Added commit list context menu items to check out local branches that point to the selected commit.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Improved performance of filtering by pathspec when the search index is enabled.</li>
+<li>Fixed failure to execute LFS pre-push hook when git-lfs isn't on the PATH.</li>
+<li>Fixed performance regression when opening the config dialog.</li>
+<li>(Win) Fixed badge color of unselected items in the dark theme.</li>
+</ul>
+<hr />
+<h3>v2.2.0 - 2018-03-27</h3>
+<h4>Added</h4>
+<ul>
+<li>Added improved support for LFS.</li>
+<li>Show icon of non-image binary files in diff view.</li>
+<li>(Win) Enable smooth scaling by automatically detecting HiDPI displays.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed failure to fully stage symlinks.</li>
+<li>Fixed failure to refresh correctly after amending the first commit.</li>
+</ul>
+<hr />
+<h3>v2.1.3 - 2018-03-06</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed failure to clone when the URL contains leading or trailing whitespace.</li>
+<li>Fixed failure to identify the correct SSH key file when using an ssh: style URL.</li>
+<li>Fixed unexpected quit after adding a valid license when the evaluation is expired.</li>
+<li>(Win) Fixed intermittent indexer crash.</li>
+</ul>
+<hr />
+<h3>v2.1.2 - 2018-03-01</h3>
+<h4>Added</h4>
+<ul>
+<li>Added privacy statement.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed crash on conflicted diffs after all conflicts have been resolved.</li>
+<li>Fixed possible indexer crash.</li>
+<li>(Win) Fixed failure to connect to GitHub through HTTPS on Windows 7.</li>
+</ul>
+<hr />
+<h3>v2.1.1 - 2018-02-27</h3>
+<h4>Added</h4>
+<ul>
+<li>Allow 'Remove Untracked Files' context menu actions to remove untracked directories.</li>
+<li>(Win) Generate crash dump file when the indexer process crashes.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Show commit list times in the local time zone. The detail view still shows time in the author's time zone offset from UTC.</li>
+</ul>
+<hr />
+<h3>v2.1.0 - 2018-02-15</h3>
+<h4>Added</h4>
+<ul>
+<li>Allow tags to be pushed individually.</li>
+<li>Added context menu option to clean untracked files from the working directory.</li>
+<li>Automatically scale down images that are wider than the diff area.</li>
+<li>Added options to collapse added and deleted files. All files now start expanded by default.</li>
+<li>(Linux) Added libsecret credential storage for distros that have it.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed regression in visiting range links from the log.</li>
+<li>Print error to log when the pre-push hook fails.</li>
+<li>Print error to log when stage fails because of a filter error.</li>
+<li>Fixed staged state of files that can't be staged because of a filter error.</li>
+<li>Fixed failure to execute some filters (including the LFS ones) that require the working directory be set to the working directory of the repository.</li>
+<li>Fixed interface issues in some themes.</li>
+<li>Fixed failure to update graph during refresh when the refresh is triggered by changes to the working directory.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Changed selection in the commit list to allow only two commits to be selected with Ctrl+click (or Cmd+click on Mac) instead of a contiguous range with Shift+click. Selecting a contigous range doesn't make sense when it includes commits on different branches.</li>
+</ul>
+<hr />
+<h3>v2.0.6 - 2018-01-23</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Disable editing and hide caret on untracked files in the diff view.</li>
+<li>Fixed failure to cancel remote transfer in some cases.</li>
+<li>Fixed failure to report error after invalid offline registration attempt.</li>
+</ul>
+<hr />
+<h3>v2.0.5 - 2018-01-17</h3>
+<h4>Added</h4>
+<ul>
+<li>Added theme menu item to edit the current theme.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed crash on some diffs.</li>
+<li>(Win) Fixed issues with localized repository and config path names.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Changed HEAD reference color in dark theme.</li>
+</ul>
+<hr />
+<h3>v2.0.4 - 2018-01-10</h3>
+<h4>Added</h4>
+<ul>
+<li>Allow more SSL errors to be ignored.</li>
+<li>Remember ignored SSL errors and don't continue to prompt about them.</li>
+<li>(Mac) Added 'Open in GitAhead' services context menu action.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed crash on conflicted files that only exist on one side of the merge.</li>
+<li>(Win) Install updates in the previous install location.</li>
+</ul>
+<hr />
+<h3>v2.0.3 - 2018-01-05</h3>
+<h4>Added</h4>
+<ul>
+<li>Remember 'no commit' setting in the merge dialog.</li>
+<li>Added more specific error message on failure to establish SSL connection.</li>
+<li>Allow certain SSL errors to be ignored.</li>
+<li>(Win) Added explorer context menu shortcuts to installer.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed integration with GitLab. A personal access token is now required for authentication.</li>
+</ul>
+<hr />
+<h3>v2.0.2 - 2017-12-22</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed issues with offline licenses.</li>
+</ul>
+<hr />
+<h3>v2.0.1 - 2017-12-20</h3>
+<h4>Added</h4>
+<ul>
+<li>Added menu indicator to 'Pull' button. The right third of the button now pops up the menu.</li>
+<li>Added option to disable filtering of non-existant paths from the recent repository list.</li>
+<li>Respect the 'gui.encoding' setting when loading and saving diff and editor text.</li>
+<li>Added option to set the character encoding in the 'Diff' configuration panels.</li>
+<li>(Win) Allow most external tools to run without shell evaluation.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed deselection by Ctrl+click in the file list.</li>
+<li>(Win) Fixed HEAD reference selection color in commit list.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Changed several theme keys to be more consistent. Added another sample theme.</li>
+</ul>
+<hr />
+<h3>v2.0.0 - 2017-12-14</h3>
+<h4><span style='color: red'>GitAhead 2.0 requires a new license!</span></h4>
+<ul>
+<li>All current commercial users can upgrade their license at no cost. Check your email for details.</li>
+<li>Non-commercial users can sign up for a free non-commercial account through a link in the app.</li>
+<li>The two week evaluation period will reset for all users, so a new license isn't required immediately.</li>
+<li>If you have any questions please contact us at <a href="mailto:support@gitahead.com">support@gitahead.com</a>.</li>
+</ul>
+<h4>Added</h4>
+<ul>
+<li>Added support for custom themes.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed failure to cleanup after conflict resolution in some cases.</li>
+</ul>
+<hr />
+<h3>v1.4.14 - 2017-12-11</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed regression in selecting the status (uncommitted changes) row after the working directory changes.</li>
+<li>Fixed failure to persist conflict resolution selections after refresh.</li>
+</ul>
+<hr />
+<h3>v1.4.13 - 2017-12-06</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed possible crash on newly initialized repos.</li>
+<li>Fixed crash on submodule update after fetch when new submodules are added.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Disallow automatic update to new major versions.</li>
+</ul>
+<hr />
+<h3>v1.4.12 - 2017-11-30</h3>
+<h4>Added</h4>
+<ul>
+<li>Added tag icon next to tag reference badges.</li>
+<li>Added option to show the full repository path in the title bar.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Remember the size and location of the start dialog.</li>
+<li>Reset selection more consistently to the HEAD branch when it changes.</li>
+</ul>
+<hr />
+<h3>v1.4.11 - 2017-11-21</h3>
+<h4>Added</h4>
+<ul>
+<li>Added buttons to conflict hunks to choose 'ours' or 'theirs' changes.</li>
+<li>Disallow staging conflicted files that still contain conflict markers.</li>
+<li>Log all merge abort actions.</li>
+<li>Added log text to explain conflict resolution process.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed failure to show stashes or possible crash in some cases.</li>
+<li>Fixed regression in updating commit list reference badges when references are added and deleted.</li>
+</ul>
+<h3>v1.4.10 - 2017-11-10</h3>
+<h4>Added</h4>
+<ul>
+<li>Changed background color of conflict badges.</li>
+<li>Added status text to indicate the number of unresolved conflicts.</li>
+<li>Added conflict hunk background colors on ours and theirs lines.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed issue with spaces in .gitignore files.</li>
+<li>Fixed a small memory leak.</li>
+<li>Fixed conflict hunk check state.</li>
+<li>Fixed conflict hunk line number issue.</li>
+<li>(Mac) Fixed issue that prevented the disk image from mounting on systems older than macOS 10.12.</li>
+</ul>
+<hr />
+<h3>v1.4.9 - 2017-11-06</h3>
+<h4>Added</h4>
+<ul>
+<li>Added context menu action to remove multiple untracked files at once.</li>
+<li>Show detached HEAD label at a specific tag if any tags point directly to the commit.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed cancel during resolve.</li>
+<li>Fixed regression is showing the detached HEAD label in the commit list.</li>
+<li>Fixed failure to immediately index some commits if the indexer is running while references are updated.</li>
+<li>Fixed failure to get more than the first page of GitHub repositories.</li>
+</ul>
+<hr />
+<h3>v1.4.8 - 2017-10-30</h3>
+<h4>Added</h4>
+<ul>
+<li>Added prompt before staging directories.</li>
+<li>Substitute emoji for emoji short codes in commit messages.</li>
+<li>Added missing extension mapping for CoffeeScript.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Sort conflicts to the top unconditionally.</li>
+<li>Automatically select the status row when the HEAD changes.</li>
+<li>Fixed commit list scroll performance on repositories with many refs.</li>
+<li>(Win) Search for git bash in default install location.</li>
+<li>(Win) Added warning dialog when an external tool fails because bash can't be found.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Changed the behavior of double-click in the file list to open the external diff/merge tool if one is enabled.</li>
+</ul>
+<hr />
+<h3>v1.4.7 - 2017-10-20</h3>
+<h4>Added</h4>
+<ul>
+<li>Added context menu actions to apply, pop, and drop stashes.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed issues related to revert and cherry-pick that result in a conflict.</li>
+<li>Fixed merge abort menu item to update more consistently.</li>
+</ul>
+<hr />
+<h3>v1.4.6 - 2017-10-17</h3>
+<h4>Added</h4>
+<ul>
+<li>Added advanced option to specify a custom URL for hosting providers.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed failure to execute pre-push hook (including LFS) in some cases.</li>
+<li>Fixed error messages on console.</li>
+</ul>
+<hr />
+<h3>v1.4.5 - 2017-10-10</h3>
+<h4>Added</h4>
+<ul>
+<li>Added option to merge without committing.</li>
+<li>Added context menu actions to stage/unstage multiple files at once.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed usability issues in the custom external tools editor interface.</li>
+<li>Don't yield focus to the commit message editor when staging files with the keyboard.</li>
+<li>Fixed state of stash toolbar button and menu item when the working directory is clean except for untracked files.</li>
+<li>Fixed failure to cherry-pick and revert when the working directory is dirty.</li>
+<li>Fixed hang on some diffs.</li>
+<li>Fixed garbage remote transfer rate when the elapsed time is too small to measure.</li>
+<li>(Mac) Fixed several issues on macOS 10.13.</li>
+</ul>
+<hr />
+<h3>v1.4.4 - 2017-09-22</h3>
+<h4>Added</h4>
+<ul>
+<li>Style editor content after saving a new file.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed style of tag reference badges that point to the HEAD.</li>
+<li>Fixed regression in showing images in the diff area.</li>
+<li>Fixed regression in indexing by lexical class.</li>
+<li>(Win) Fixed regression in staging &quot;exectuable&quot; files.</li>
+</ul>
+<hr />
+<h3>v1.4.3 - 2017-09-15</h3>
+<h4>Added</h4>
+<ul>
+<li>Added reference badge for the detached HEAD state.</li>
+<li>Added commit list context menu item to rebase a specific commit.</li>
+<li>Added remote branch context menu item to create a new local branch that tracks the remote branch.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed bugs in staging file mode changes.</li>
+<li>Fixed failure to look up the correct host name for SSH URLs that use an alias from the SSH config file.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Start indexer process with lower priority.</li>
+</ul>
+<hr />
+<h3>v1.4.2 - 2017-09-11</h3>
+<h4>Added</h4>
+<ul>
+<li>Draw HEAD reference badges darker and bold.</li>
+<li>Added dotted graph edge from the status item to the current HEAD commit.</li>
+<li>Added an option to show the status item even when the workin directory is clean.</li>
+<li>Added commit list context menu item to merge a specific commit.</li>
+</ul>
+<hr />
+<h3>v1.4.1 - 2017-09-05</h3>
+<h4>Added</h4>
+<ul>
+<li>Added merge and rebase context menu actions to reference view references.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed SSH host name lookup to use the first matching host instead of the last.</li>
+<li>Fixed regression in loading the initial diff on repo open when the working directory scan is very fast.</li>
+<li>(Win) Fixed failure to look up stored passwords from the credential manager for HTTPS URLs that don't include the username.</li>
+</ul>
+<hr />
+<h3>v1.4.0 - 2017-08-30</h3>
+<h4>Added</h4>
+<ul>
+<li>Added context menu action to delete tags.</li>
+<li>Added option to show all references in the commit list.</li>
+<li>Added option to change commit list sort order.</li>
+<li>Added option to turn off the commit list graph.</li>
+<li>Expand the reference view by clicking in its label area.</li>
+<li>Jump to the selected reference by clicking on its name in the reference view.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed dark theme appearance of the advanced search button.</li>
+<li>Don't reset the care position/selection when the editor window loses focus.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Changing the selected reference back to the current (HEAD) branch no longer causes the working directory to be rescanned.</li>
+</ul>
+<hr />
+<h3>v1.3.13 - 2017-08-18</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed file list scroll range bug.</li>
+<li>Fixed unresponsive interface on pull followed by submodule update.</li>
+<li>Fixed invalid commit list context menu actions when multiple commits are selected.</li>
+<li>Fixed diff view update bug when selecting a different branch in the reference view.</li>
+<li>Disable diff view expand buttons for files that don't have any hunks.</li>
+<li>Fixed file context menu crash in a newly initialized repository.</li>
+<li>Fixed indexer crash on failure to diff binary blobs that don't appear to be binary based on the heuristic.</li>
+<li>Fixed crash when the .git/gitahead directory gets created with the wrong permissions.</li>
+</ul>
+<h4>Added</h4>
+<ul>
+<li>Added options to sort file list ascending or descending.</li>
+<li>Added commit list context menu option to star commits.</li>
+<li>Added commit list context menu action to create a new branch at an arbitrary commit.</li>
+<li>Checkout on double-click in the reference view.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Show renamed and copied files expanded by default in diff view.</li>
+</ul>
+<hr />
+<h3>v1.3.12 - 2017-08-04</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed intermittent indexer crash.</li>
+<li>(Win) Fixed failure to install indexer component.</li>
+<li>Fixed external diff/merge tool display bug on paths containing spaces.</li>
+</ul>
+<h4>Added</h4>
+<ul>
+<li>Added option to sort file list and diff view by status instead of name.</li>
+</ul>
+<hr />
+<h3>v1.3.11 - 2017-07-20</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed missing status badges in tree view.</li>
+<li>Fixed search index locking issue.</li>
+<li>Clean up search index temporary files after crash.</li>
+<li>Fixed performance issue on some repositories.</li>
+</ul>
+<h4>Added</h4>
+<ul>
+<li>Added syntax highlighting for .less files.</li>
+<li>Added basic support for LFS clean/smudge filter and pre-push hook.</li>
+<li>(Linux) Install .desktop file and icons for better desktop integration.</li>
+</ul>
+<hr />
+<h3>v1.3.10 - 2017-07-06</h3>
+<h4>Added</h4>
+<ul>
+<li>Added ability to search by wildcard query.</li>
+<li>Added ability search date ranges with before: and after: operators.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>The search index now stores dates in a locale-agnostic format.</li>
+<li>The indexer now runs as an external worker process.</li>
+</ul>
+<hr />
+<h3>v1.3.9 - 2017-06-26</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Elide reference badges in the detail view instead of forcing the window to grow.</li>
+<li>Update reference badges in the detail view when a reference is added/deleted/updated.</li>
+<li>Fixed crash in checkout dialog when there aren't any references.</li>
+<li>Fixed failure to push from 'Push To...' dialog when opened from a log link.</li>
+<li>Push to the remote reference that corresponds to the current branch's upstream by default.</li>
+</ul>
+<h4>Added</h4>
+<ul>
+<li>Added clear button to all fields in the advanced search popup.</li>
+</ul>
+<hr />
+<h3>v1.3.8 - 2017-06-21</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed failure to connect to the update server since v1.3.6.</li>
+</ul>
+<h4>Added</h4>
+<ul>
+<li>Added file context menu action to open files in the default file browser.</li>
+</ul>
+<hr />
+<h3>v1.3.7 - 2017-06-19</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Disallow removing command line tools that weren't installed by the app.</li>
+<li>Delete remote branch by the name of the upstream instead of the name of the local branch.</li>
+</ul>
+<h4>Added</h4>
+<ul>
+<li>Added an interface for creating annotated tags.</li>
+<li>Show annotated tag author and message in hover text in the reference view.</li>
+<li>Added context menu item to delete local branches from the reference view.</li>
+<li>Added explanatory tool tips to the advanced search popup.</li>
+<li>Added an advanced option in the 'Push To...' dialog to push to a different remote name.</li>
+</ul>
+<hr />
+<h3>v1.3.6 - 2017-06-12</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed failure to remember the new default repository path when accepting the init repo dialog.</li>
+<li>Fixed regression in refreshing the status diff after creating a new file in the working directory.</li>
+</ul>
+<h4>Added</h4>
+<ul>
+<li>Added init/deinit column to submodule configuration table.</li>
+<li>Allow context menu to discard changes to deleted files.</li>
+<li>Enable merging and rebasing on remote branches and tags.</li>
+<li>Added new push hints for the case where no remotes are configured for the current branch.</li>
+</ul>
+<hr />
+<h3>v1.3.5 - 2017-05-30</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed staged state of dirty submodules. Disable dirty submodule check boxes.</li>
+<li>Fixed crash on submodule update when there are modules that have been inited but don't exist on disk.</li>
+<li>(Win) Fixed search completion popup layout.</li>
+<li>(Win) Fixed intermittent crash when files in ignored directories change on disk.</li>
+</ul>
+<h4>Added</h4>
+<ul>
+<li>Added context menu item to discard changes in selected files.</li>
+<li>(Linux) Added command line installer.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Allow remote host accounts to be collapsed in the repository browser.</li>
+<li>Moved new branch dialog upstream option into an advanced settings section.</li>
+</ul>
+<hr />
+<h3>v1.3.4 - 2017-05-23</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed automatic scaling issue.</li>
+</ul>
+<hr />
+<h3>v1.3.3 - 2017-05-22</h3>
+<h4>Added</h4>
+<ul>
+<li>Added automatic refresh when the working directory changes. Removed refresh on activation.</li>
+<li>Added prepopulated commit message when staging files and the commit message editor is empty.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed the initial directory of the clone dialog browse button.</li>
+<li>Fixed crash when staging/unstaging the hunk of an untracked file.</li>
+<li>(Win) Scale application uniformly (although less smoothly) when font scaling is greater than 100%.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Show the &quot;Commit&quot; button as the default button.</li>
+<li>Double-click in the commit list no longer opens a new tab.</li>
+</ul>
+<hr />
+<h3>v1.3.2 - 2017-05-10</h3>
+<h4>Added</h4>
+<ul>
+<li>Added dialog to prompt the user to choose a theme on the first run.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed performance issues on some large repositories.</li>
+<li>Fixed commit list graph and reference bugs on some repositories.</li>
+<li>Fixed several dialog default buttons in the dark theme.</li>
+<li>Fixed possible inconsistent state of the search index if the write is interrupted.</li>
+</ul>
+<hr />
+<h3>v1.3.1 - 2017-05-02</h3>
+<h4>Added</h4>
+<ul>
+<li>Added a reference badge in the detail view that shows the number of commits since the latest tag. This is similar to git describe.</li>
+<li>Added gnome-keyring support for securely storing passwords on Linux.</li>
+<li>Added copy button next to the short id in the detail view.</li>
+<li>Added automatic refresh when the application loses and regains focus.</li>
+<li>Added inline autocomplete to pathspec filter field.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed crash on refresh after a tab is closed.</li>
+<li>Fixed indexer performance issues.</li>
+<li>Fixed possible failure to respect indexer term limits.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Reimplemented clone/init dialog as a wizard to walk through each step.</li>
+</ul>
+<hr />
+<h3>v1.3.0 - 2017-04-21</h3>
+<h4>Added</h4>
+<ul>
+<li>Added redesigned interface for choosing the current reference and setting the pathspec filter.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed crash on submodule init.</li>
+<li>Fixed click issue in the star area of the &quot;uncommitted changes&quot; row.</li>
+</ul>
+<hr />
+<h3>v1.2.6 - 2017-04-13</h3>
+<h4>Added</h4>
+<ul>
+<li>Added ability to star favorite commits.</li>
+<li>Added option to delete branch from remote when deleting a local branch.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Don't collapse log entries when clicking on a link in the log.</li>
+<li>Fixed possible crash during indexing.</li>
+<li>(Linux) Fixed possible crash on start.</li>
+</ul>
+<hr />
+<h3>v1.2.5 - 2017-04-05</h3>
+<h4>Added</h4>
+<ul>
+<li>Added a dark theme.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed possible crash during indexing.</li>
+<li>(Win) Fixed failure to start with a valid evaluation license in some cases.</li>
+</ul>
+<hr />
+<h3>v1.2.4 - 2017-03-15</h3>
+<h4>Added</h4>
+<ul>
+<li>Show kind of reference in the reference list label.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed possible crash on diffs with no newline at the end of the file.</li>
+</ul>
+<hr />
+<h3>v1.2.3 - 2017-03-10</h3>
+<h4>Added</h4>
+<ul>
+<li>Highlight changed words in diff output.</li>
+<li>Added advanced search button to the bottom of the search completion popup.</li>
+<li>Added prompt to add a new local branch when checking out a remote tracking branch.</li>
+<li>Respect 'GIT_SSL_NO_VERIFY' environment variable and 'http.sslVerify' config setting when validating certificates.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed diff error near the end of files with no trailing newline.</li>
+<li>Fixed possible destructive changes when clicking on a stale 'abort merge' link.</li>
+<li>Fixed incorrect error message when a merge fails because of conflicts with uncommitted changes.</li>
+</ul>
+<hr />
+<h3>v1.2.2 - 2017-03-02</h3>
+<h4>Added</h4>
+<ul>
+<li>Added drag-and-drop into the diff area to copy files into the repository.</li>
+<li>Added menu action to create new files with the built-in editor.</li>
+<li>Added interface for creating new files and copying files into newly initialized repositories.</li>
+<li>Added initial repository setup actions to repository chooser. Made the remote host actions more obviously clickable.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed regression in staging directories.</li>
+<li>Restore missing file context menu items.</li>
+<li>Fixed failure to amend the very first commit in a repository.</li>
+<li>Fixed failure to load the correct image file from the selected commit.</li>
+<li>(Mac) Fixed regression in scrolling with the scroll wheel over untracked files.</li>
+</ul>
+<hr />
+<h3>v1.2.1 - 2017-02-24</h3>
+<h4>Added</h4>
+<ul>
+<li>Added basic GitLab integration.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed performance issues in commit editor.</li>
+<li>Fixed crash when adding a new branch from the config dialog in a newly initialized repository.</li>
+<li>Fixed crash when clicking on the 'Edit Config File...' button in the global settings dialog and the global settings file (~/.gitconfig) doesn't exist.</li>
+<li>Open remote account dialog with the correct kind when double-clicking on one of the account kinds in the repository chooser.</li>
+</ul>
+<hr />
+<h3>v1.2.0 - 2017-02-17</h3>
+<h4>Added</h4>
+<ul>
+<li>Added external edit, diff, and merge context menu actions.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Disable minus button when an error node is selected in the repository chooser remote list.</li>
+<li>Fixed wrong error message in license error dialog.</li>
+<li>(Win) Fixed advanced search button position.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Changed settings and config dialogs to reflect newly added external tool settings.</li>
+</ul>
+<hr />
+<h3>v1.1.4 - 2017-02-04</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Improved performance when selecting uncommitted changes with modified submodules.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>(Linux) Changed application style to be more consistent.</li>
+</ul>
+<hr />
+<h3>v1.1.3 - 2017-01-31</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed failure to stage/unstage deleted files.</li>
+</ul>
+<hr />
+<h3>v1.1.2 - 2017-01-25</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed pathological log view performance on checkout when many files are modified.</li>
+<li>Fixed layout of reference badges in commit list.</li>
+<li>(Win) Fixed clipped file name in diff view.</li>
+</ul>
+<hr />
+<h3>v1.1.1 - 2017-01-16</h3>
+<h4>Fixed</h4>
+<ul>
+<li>(Linux) Fixed 'invalid SSL certificate' error.</li>
+<li>(Win) Fixed broken context menu on right-click on selected files in the file list.</li>
+</ul>
+<hr />
+<h3>v1.1.0 - 2017-01-05</h3>
+<h4>Added</h4>
+<ul>
+<li>Added new reference popup with a tabbed interface and a field to filter by name.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed failure to remove config section headers when the last key is removed.</li>
+<li>Queue up new fetch, pull, push and submodule update requests when an existing asynchronous operation is ongoing instead of silently dropping them.</li>
+</ul>
+<hr />
+<h3>v1.0.3 - 2016-12-27</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed failure to authenticate with SSH when the public key file is missing.</li>
+<li>Fixed failure to remove recent repositories when clicking the minus button.</li>
+<li>Fixed crash on navigating forward through history to the HEAD branch when there are no uncommitted changes.</li>
+</ul>
+<hr />
+<h3>v1.0.2 - 2016-12-06</h3>
+<h4>Added</h4>
+<ul>
+<li>Added missing syntax highlight file extension mappings for several languages.</li>
+<li>Added more specific error message for cases where the SSH identity file isn't found.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>(Win) Fixed slight visual issue with multiple items selected in the commit list.</li>
+</ul>
+<hr />
+<h3>v1.0.1 - 2016-12-02</h3>
+<h4>Added</h4>
+<ul>
+<li>Remember the maximum size of the file list when the splitter is moved.</li>
+<li>Added missing Fortran file extension mappings.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed several history issues.</li>
+<li>Fixed failure to authenticate with SSH key when the server also supports username/password authentication.</li>
+</ul>
+<hr />
+<h3>v1.0.0 - 2016-11-28</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed several conflict workflow issues.</li>
+<li>Fixed failure to prompt to save on editor close.</li>
+<li>Fixed crash on diff after files change on disk.</li>
+<li>Fixed several file context menu issues.</li>
+<li>Fixed some cases of pathological performance on filter by pathspec.</li>
+<li>(Mac) Fixed failure to select the current item in the pathspec popup when pressing return/enter.</li>
+</ul>
+<h4>Added</h4>
+<ul>
+<li>Split conflicted files into hunks around conflict markers.</li>
+<li>Abort merge with reset --merge semantics instead of --hard semantics.</li>
+<li>Truncate blame message text with ellipsis instead of clipping at the bottom.</li>
+</ul>
+<hr />
+<h3>v0.9.3 - 2016-11-14</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed wrong error message in some cases.</li>
+<li>Fixed regression when staging or discarding hunks.</li>
+<li>(Win) Fixed proxy issue when connecting to remotes.</li>
+</ul>
+<hr />
+<h3>v0.9.2 - 2016-11-09</h3>
+<h4>Added</h4>
+<ul>
+<li>Added diff view context menu option to filter history by the selected path.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed issues related to reading the merge message from disk.</li>
+<li>Fixed regression in scrolling to find matches in the diff view.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Changed pathspec placeholder text.</li>
+</ul>
+<hr />
+<h3>v0.9.1 - 2016-11-06</h3>
+<h4>Added</h4>
+<ul>
+<li>Order all conflicts first.</li>
+<li>Show the merge head in the commit list when merging.</li>
+<li>Added checkout context menu action to the diff view.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Only store credentials in the keychain after successful remote connection.</li>
+<li>Fixed commit list order for commits that happen at the same time (e.g. because of rebase).</li>
+<li>Fixed file list scroll bugs.</li>
+<li>Fixed crash on editor open in newly initialized repos.</li>
+<li>Fixed merge workflow to allow conflicts to be resolved and merges committed.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Changed the meaning of selection in the file list to filter the diff view by the selected files.</li>
+</ul>
+<hr />
+<h3>v0.9.0 - 2016-10-31</h3>
+<h4>Added</h4>
+<ul>
+<li>Added licensing scheme. Contact us to beta test a permanent license.</li>
+<li>Allow tabs to be reordered by dragging.</li>
+<li>Respect branch.&lt;name&gt;.rebase and pull.rebase when pulling.</li>
+<li>Search up through parent directories when opening a directory that doesn't contain a repository.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Disallow invalid branch names in the new branch dialog.</li>
+<li>Disable discard buttons for submodules.</li>
+<li>Read ~/.ssh/config to determine which identity file to load.</li>
+<li>Fixed password save regression.</li>
+<li>Fixed incorrect line endings after discarding hunks with filter settings (e.g. core.autocrlf).</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Disable warning about opening an invalid repository from the command line. It's more annoying than useful.</li>
+</ul>
+<hr />
+<h3>v0.8.15 - 2016-10-18</h3>
+<h4>Added</h4>
+<ul>
+<li>Added ability to select and copy from the log view as both plain and rich text.</li>
+<li>Added drag-and-drop of repository folders into the main window to open in a new tab.</li>
+<li>(Mac) Added drag-and-drop of repository folders into the application icon to open.</li>
+<li>(Win) Added menu bar to editor windows. Introduces several missing shortcuts.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed editor automatic scroll regressions.</li>
+<li>(Win) Fixed editor find regression.</li>
+</ul>
+<hr />
+<h3>v0.8.14 - 2016-10-13</h3>
+<h4>Added</h4>
+<ul>
+<li>Added initial Linux beta build.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed additional proxy auto-detection issue.</li>
+<li>Fixed some HTTPS authentication issues and incorrect errors.</li>
+</ul>
+<hr />
+<h3>v0.8.13 - 2016-09-30</h3>
+<h4>Added</h4>
+<ul>
+<li>Auto-detect system proxy settings.</li>
+<li>(Win) Added VS2013 redistributables to the installer.</li>
+<li>(Win) Removed component page from the installer.</li>
+<li>(Win) Added check box to launch the application after the installer finishes.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Start merge/revert/cherry-pick/stash dialog without keyboard focus in the message editor.</li>
+<li>Fixed hang or bad performance on some hunks at the very edge of showing the horizontal scroll bar.</li>
+<li>Fixed failure to resize hunks after font size changes.</li>
+<li>Fixed failure to update submodules after pull when the pull results in a merge.</li>
+<li>Fixed loss of search filter results after a branch is updated.</li>
+<li>Fixed crash on newly initialized repositories with untracked files.</li>
+<li>Select head reference after the current reference is deleted.</li>
+</ul>
+<hr />
+<h3>v0.8.12 - 2016-09-23</h3>
+<h4>Added</h4>
+<ul>
+<li>Added fake credentials implementation for Windows.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed regression in commit list update after a remote reference changes.</li>
+<li>Fixed config dialog performance issue on repositories with many submodules.</li>
+<li>Fixed size of untracked file hunks in diff view.</li>
+<li>Fixed stale status diff after aborting a merge.</li>
+<li>(Win) Fixed stash crash on when no default signature is set.</li>
+<li>(Win) Fixed persistent file lock and several issues related to it.</li>
+</ul>
+<hr />
+<h3>v0.8.11 - 2016-09-13</h3>
+<h4>Added</h4>
+<ul>
+<li>Added new Repository menu with Commit and Amend Commit actions.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Improved layout of long file names in diff view.</li>
+<li>Changed behavior of hunk check box to only collapse the hunk when clicked.</li>
+<li>Fixed performance issue during commit message editing with lots of staged files.</li>
+</ul>
+<hr />
+<h3>v0.8.10 - 2016-08-30</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed possible crash on remote transfer cancel.</li>
+<li>Fixed regression in setting branch upstream from config dialog.</li>
+<li>Improved responsiveness of changing tabs and some other operations.</li>
+<li>Fixed hunks sometimes starting out collapsed after commit.</li>
+<li>Fixed commit list update after the current branch's upstream changes.</li>
+<li>Fixed responsiveness issues when the commit list changes.</li>
+<li>Fixed possible remote transfer thread hang after prompting for HTTPS credentials.</li>
+<li>(Win) Fixed crash on reference list navigation with arrow keys.</li>
+</ul>
+<hr />
+<h3>v0.8.9 - 2016-08-23</h3>
+<h4>Added</h4>
+<ul>
+<li>Added submodule update dialog to update a subset of submodules and set parameters.</li>
+<li>Added Ok button to dismiss settings dialog.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed intermittent crash during status calculation.</li>
+<li>Restore correct reference from history and log links.</li>
+<li>Improved responsiveness and memory usage on files with a large number of hunks.</li>
+</ul>
+<hr />
+<h3>v0.8.8 - 2016-08-12</h3>
+<h4>Added</h4>
+<ul>
+<li>Update submodules recursively be default.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed authentication hang when ssh-agent is running but doesn't have any keys.</li>
+<li>Fixed horizontal scroll of log view.</li>
+<li>Fixed layout and input validation in new branch dialog.</li>
+<li>Fixed crash on repositories that contain remote branches that don't refer to a valid remote.</li>
+</ul>
+<hr />
+<h3>v0.8.7 - 2016-08-05</h3>
+<h4>Added</h4>
+<ul>
+<li>Enable reset for the head commit (e.g. for hard reset).</li>
+<li>Improved responsiveness after staging/unstaging with many modified/untracked files.</li>
+<li>Restore commit list selection after update instead of always selecting the first row.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed failure to fetch annotated tags added to existing commits.</li>
+<li>Fixed commit list sometimes switching to newly added references instead of updating the currently selected reference.</li>
+<li>Fixed possible deadlock caused by a race between remote transfer cancel and credential lookup.</li>
+<li>Fixed regression in setting initial focus on the commit list.</li>
+<li>Fixed possible black background in blame margin.</li>
+<li>Fixed possible crash on tab close.</li>
+<li>Fixed checkout check box visibility regression in new branch dialog.</li>
+</ul>
+<hr />
+<h3>v0.8.6 - 2016-07-29</h3>
+<h4>Added</h4>
+<ul>
+<li>Added tabbed interface.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed binary detection and loading of untracked image files in the diff view.</li>
+<li>Fixed visual artifacts and warning message in the blame margin when the repository contains a single commit.</li>
+</ul>
+<hr />
+<h3>v0.8.5 - 2016-07-18</h3>
+<h4>Added</h4>
+<ul>
+<li>Changed file context copy menu to include short, relative and long names.</li>
+<li>Added option to show a heat map in the blame margin (enabled by default).</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed crash on opening a bare repository.</li>
+<li>Fixed bare repository name in the title bar.</li>
+<li>Fixed crash on starting an asynchronous remote operation when another is already running.</li>
+<li>Fixed failure to reset scroll width after loading a new file in the editor.</li>
+</ul>
+<hr />
+<h3>v0.8.4 - 2016-07-13</h3>
+<h4>Added</h4>
+<ul>
+<li>Load advanced search query items from the query string.</li>
+<li>Added completion suggestions for each field of the advanced search widget.</li>
+<li>Added context menu items to copy file name and path.</li>
+<li>Added option to update submodules after pull (disabled by default).</li>
+<li>(Win) Added basic crash logging.</li>
+</ul>
+<hr />
+<h3>v0.8.3 - 2016-07-08</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Disable branch checkout and creation when the HEAD is unborn.</li>
+<li>Fixed regression in staging untracked files.</li>
+<li>Fixed status and staging of files in newly inited repos.</li>
+<li>Allow commit on an unborn HEAD.</li>
+</ul>
+<h4>Added</h4>
+<ul>
+<li>Show the unborn HEAD name in the title bar.</li>
+<li>Show the commit id in the title bar when the HEAD is detached.</li>
+<li>Added a 'Checkout' command to the commit list context menu.</li>
+<li>Added option to automatically fetch periodically (enabled by default).</li>
+<li>Added option to automatically push after commit (disabled by default).</li>
+</ul>
+<hr />
+<h3>v0.8.2 - 2016-07-01</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed submodule update hang after the first submodule.</li>
+<li>Fixed crash when the Submodule-&gt;Open menu is activated without and active window.</li>
+<li>Fixed possible corruption of the git index when a checkout is triggerd during search indexing.</li>
+<li>(Win) Fixed initial location of settings dialog when opened at a specific index.</li>
+</ul>
+<h4>Added</h4>
+<ul>
+<li>Allow hunks to be discarded individually.</li>
+<li>Allow about dialog version string to be selected.</li>
+<li>Added option to push all tags.</li>
+</ul>
+<hr />
+<h3>v0.8.1 - 2016-06-28</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed crash on status diff cancel.</li>
+</ul>
+<hr />
+<h3>v0.8.0 - 2016-06-28</h3>
+<h4>Added</h4>
+<ul>
+<li>Hunks can now be staged/unstaged individually.</li>
+<li>Added delete confirmation dialogs before deleting remotes and branches.</li>
+<li>Added warning when deleting branches that aren't fully merged.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Disallow deleting the current branch.</li>
+<li>Disallow accepting new remote dialog with empty name or URL.</li>
+</ul>
+<h4>Known Issues</h4>
+<ul>
+<li>Blame doesn't update after changes to the editor buffer.</li>
+<li>Pathspec field auto-complete only works for the first path element.</li>
+<li>(Win) Editor windows don't have a menu bar or key bindings.</li>
+</ul>
+<hr />
+<h3>v0.7.9 - 2016-06-10</h3>
+<h4>Added</h4>
+<ul>
+<li>Group remote branches by remote in the reference popup.</li>
+<li>Added hunk header edit buttons start editing at the location of the hunk.</li>
+<li>Added cherry-pick context menu action.</li>
+<li>Added repository special state (e.g. MERGING, REBASING, etc.) to the title bar.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed regression in reporting errors from remote connections.</li>
+<li>(Win) Fixed crash when opening new editor windows.</li>
+<li>(Win) Fixed tree expansion indicator style changing after showing dialogs.</li>
+</ul>
+<hr />
+<h3>v0.7.8 - 2016-06-05</h3>
+<h4>Added</h4>
+<ul>
+<li>Added parameter to 'Fetch/Pull From' dialogs to update existing tags.</li>
+<li>Connect to remotes asynchronously and throttle log updates to fix performance issues.</li>
+<li>Added option to init and update submodules.</li>
+<li>Added username field to HTTPS credentials prompt.</li>
+<li>Changed commit editor status text to include the total number of files.</li>
+<li>Added progress indicator and cancel button to asynchronous log entries.</li>
+<li>Allow clone to be canceled by clicking on the cancel button.</li>
+<li>Allow status diff to be canceled by clicking on the cancel button.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed spurious update notification for existing tags that aren't really updated by fetch.</li>
+<li>Fixed line stats (plus/minus) widget resize issue.</li>
+<li>Fixed submodule update to ignore modules that haven't been inited.</li>
+<li>Removed superfluous timestamps from clone dialog log area.</li>
+<li>Fixed initial size of config dialog when opening it up at a specific index.</li>
+</ul>
+<hr />
+<h3>v0.7.7 - 2016-05-29</h3>
+<h4>Added</h4>
+<ul>
+<li>Generate fake user name and email when they're not in settings.</li>
+<li>Added log hints to set user name and email and amend commit.</li>
+<li>Added repository configuration interface for general settings.</li>
+<li>Added global git configuration interface to global preferences.</li>
+<li>Added commit editor status label to indicate number of staged files.</li>
+<li>Added draggable splitter between file list and diff view.</li>
+<li>Added swift syntax highlighting.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed initial visibility of staged files.</li>
+</ul>
+<hr />
+<h3>v0.7.6 - 2016-05-24</h3>
+<h4>Added</h4>
+<ul>
+<li>Added better error reporting for failure to commit</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed check state of newly added files in the diff view</li>
+<li>Hide tree view during status update</li>
+<li>Fixed crash on submodule open when the submodule hasn't been inited</li>
+</ul>
+<hr />
+<h3>v0.7.5 - 2016-05-23</h3>
+<h4>Added</h4>
+<ul>
+<li>Added warning prompt before trying to commit on a detached HEAD</li>
+<li>Added commit message sumary to log entries for commit and rebase</li>
+<li>Added markdown syntax highlighting</li>
+<li>Log stash and stash pop operations</li>
+<li>Added double-click to open submodule in tree view, file list and diff view</li>
+<li>Added fetch/pull/push from/to actions with a dialog to choose parameters</li>
+<li>Added log hints to set upstream branch on push and allow push without upstream</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Collapse existing log entries when new top-level entries are added instead of when the log is made visible</li>
+<li>Keep log open while editing merge commit message</li>
+</ul>
+<hr />
+<h3>v0.7.4 - 2016-05-16</h3>
+<h4>Added</h4>
+<ul>
+<li>Added submodule config panel</li>
+<li>Added submodule menu and changed layout and shortcuts of some existing menus</li>
+<li>Added submodule update</li>
+<li>Added link to open submodules from diff view</li>
+<li>Added tag context menu action in the commit list</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed spurious conflict on rebase with modified submodules</li>
+<li>Fixed dirty submodules always shown as staged</li>
+<li>Fixed toolbar remote button badge update when the HEAD is detached or the current branch doesn't have an upstream</li>
+<li>Removed all synchronization between the indexer and the main thread by abandoning the notion of restarting a running indexer. Now the main thread signals the indexer to cancel and waits for it to finish before restarting.</li>
+</ul>
+<hr />
+<h3>v0.7.3 - 2016-05-05</h3>
+<h4>Added</h4>
+<ul>
+<li>Added disambiguation of identically named repositories in recent repository lists</li>
+<li>Added option (with shortcut) to checkout the currently selected branch</li>
+<li>Added daily check for updates when automatic update is enabled</li>
+<li>Added support for showing multiple roots in the commit list</li>
+<li>Show the upstream branch associated with a local branch even when it's not reachable from the local ref</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed lookup of credentials by percent encoded username (e.g. email address)</li>
+<li>Fixed deadlock on pull caused by a race between indexing starting after fetch and canceling indexing before fast-forward</li>
+</ul>
+<hr />
+<h3>v0.7.2 - 2016-05-02</h3>
+<h4>Added</h4>
+<ul>
+<li>Added refresh item to view menu</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed performance issues related to large numbers of untracked/modified files</li>
+<li>(Mac) Removed install rpaths from Qt frameworks to placate Gatekeeper</li>
+<li>(Mac) Changed update mount point to a guaranteed unique temporary directory. Fixes update failure when the original download image is still mounted.</li>
+</ul>
+<hr />
+<h3>v0.7.1 - 2016-04-28</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Updated libgit2 to fix a large memory leak</li>
+</ul>
+<hr />
+<h3>v0.7.0 - 2016-04-26</h3>
+<h4>Known Issues</h4>
+<ul>
+<li>Hunks can't be staged individually even though they have a check box</li>
+<li>Dirty submodules always show up as staged</li>
+<li>Pathspec field auto-complete only works for the first path element</li>
+<li>Blame doesn't update changed editor buffers</li>
+<li>(Windows) The style of tree expansion indicators sometimes changes after showing dialogs</li>
+<li>There are several other bugs and missing features in the issue tracker</li>
+<li>This list is by no means exhaustive...</li>
+</ul>

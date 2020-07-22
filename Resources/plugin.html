@@ -1,0 +1,284 @@
+<html>
+<head>
+<style>
+body {
+  width: 800px;
+  margin: 20px
+}
+h3 {
+  text-decoration: underline
+}
+code {
+  font-size: 85%;
+  padding: 0.2em 0.4em;
+  background-color: #F0F0F0;
+  border-radius: 3px
+}
+pre {
+  padding: 16px;
+  margin: 16px;
+  line-height: 1.45;
+  background-color: #F0F0F0;
+  border-radius: 3px
+}
+strong {
+  font-size: 125%
+}
+</style>
+</head>
+<body>
+<h1>GitAhead Plugin API</h1>
+<hr />
+<h2>Overview</h2>
+<p>Plugins allow the application to be extended to flag errors in diffs.
+Plugins are Lua scripts that detect one or more error kind. The name
+of the script defines the name of the plugin category in the settings
+interface. Plugins should be saved to one of the following locations:</p>
+<ul>
+<li>(Windows) - %APPDATA%\GitAhead\plugins</li>
+<li>(Linux) - ~/.config/GitAhead/plugins</li>
+<li>(macOS) - ~/Library/Application Support/GitAhead/plugins</li>
+</ul>
+<hr />
+<h2>Conventions</h2>
+<p>Indexes are 1-based following the Lua convention.</p>
+<p>Several APIs require <code>key</code> arguments to define and query values. Keys
+should be strings that are unique for the given kind of object.</p>
+<p>Line positions refer to the position of characters within a line
+without regard to tab expansion. Column numbers take tab expansion
+into account using the diff editor's current tab width.</p>
+<hr />
+<h2>Plugin Format</h2>
+<p>Plugins should define the following global functions to be invoked
+by the application:</p>
+<p><strong><code>options (opts)</code></strong> - Define options that the user can set in the
+application. (optional)</p>
+<ul>
+<li><code>opts</code> - the <code>Options</code> object to define user options</li>
+</ul>
+<p><strong><code>kinds (kinds, opts)</code></strong> - Define error kinds that can be added to diff
+lines. (required)</p>
+<ul>
+<li><code>kinds</code> - the <code>Kinds</code> object to define error kinds</li>
+<li><code>opts</code> - the actual options set by the user</li>
+</ul>
+<p><strong><code>hunk (hunk, opts)</code></strong> - Invoked once for each hunk in the diff as it is
+loaded. (required)</p>
+<ul>
+<li><code>hunk</code> - the <code>Hunk</code> object that provides information about the hunk</li>
+<li><code>opts</code> - the actual options set by the user</li>
+</ul>
+<p><em>Example:</em></p>
+<pre><code>function options (opts)
+  -- define options
+end
+
+function kinds (kinds, opts)
+  -- define kinds
+end
+
+function hunk (hunk, opts)
+  -- handle one hunk
+end
+</code></pre>
+<hr />
+<h2>APIs</h2>
+<h3>Options</h3>
+<p><strong><code>script_dir ()</code></strong> - Get the directory where the plugin script is located.</p>
+<p><em>Example:</em></p>
+<pre><code>local file = opts:script_dir() .. &quot;/resource_file.txt&quot;
+</code></pre>
+<p><strong><code>define_boolean (key, text [, value])</code></strong> - Define a check box option.</p>
+<ul>
+<li><code>text</code> - the text of the check box</li>
+<li><code>value</code> - the default boolean state of the check box (false)</li>
+</ul>
+<p><em>Example:</em></p>
+<pre><code>opts:define_boolean(&quot;blank&quot;, &quot;Allow blank lines&quot;, true)
+</code></pre>
+<p><strong><code>define_integer (key, text [, value])</code></strong> - Define an integer spin box option.</p>
+<ul>
+<li><code>text</code> - the text of the spin box label</li>
+<li><code>value</code> - the default integer value of the spin box (0)</li>
+</ul>
+<p><em>Example:</em></p>
+<pre><code>opts:define_integer(&quot;column&quot;, &quot;Line length limit&quot;, 80)
+</code></pre>
+<p><strong><code>define_string (key, text [, value])</code></strong> - Define a text field option.</p>
+<ul>
+<li><code>text</code> - the text of the field label</li>
+<li><code>value</code> - the default string value of the text field (&quot;&quot;)</li>
+</ul>
+<p><em>Example:</em></p>
+<pre><code>opts:define_string(&quot;keywords&quot;, &quot;Keywords&quot;, &quot;FIXME TODO TBD&quot;)
+</code></pre>
+<p><strong><code>define_list (key, text, list [, index])</code></strong> - Define a popup list option.</p>
+<ul>
+<li><code>text</code> - the text of the popup list label</li>
+<li><code>list</code> - an ordered list of option strings</li>
+<li><code>index</code> - the default index of the popup list (1)</li>
+</ul>
+<p><em>Example:</em></p>
+<pre><code>opts:define_list(&quot;tabs&quot;, &quot;Disallow tabs&quot;, {&quot;In indentation&quot;, &quot;Everywhere&quot;}, 2)
+</code></pre>
+<p><strong><code>value (key)</code></strong> - Get the value of an option by key.</p>
+<p><em>Example:</em></p>
+<pre><code>local column = opts:value(&quot;column&quot;)
+</code></pre>
+<h3>Kinds</h3>
+<p><strong><code>define_note (key, name, msg, desc [, enabled])</code></strong> - Define a note kind.</p>
+<p><strong><code>define_warning (key, name, msg, desc [, enabled])</code></strong> - Define a warning kind.</p>
+<p><strong><code>define_error (key, name, msg, desc [, enabled])</code></strong> - Define an error kind.</p>
+<ul>
+<li><code>name</code> - the kind name to display in the settings interface</li>
+<li><code>msg</code> - the message to display at each instance of the error</li>
+<li><code>desc</code> - the kind description to display in the settings interface</li>
+<li><code>enabled</code> - the default state of this kind (false)</li>
+</ul>
+<p><em>Example:</em></p>
+<pre><code>kinds:define_error(
+  &quot;trailing&quot;,
+  &quot;Trailing&quot;,
+  &quot;trailing whitespace added&quot;
+  &quot;Trailing whitespace is not allowed.&quot;,
+  true -- enabled by default
+)
+</code></pre>
+<p>Note that the severity of the kind (note, warning, error) is a default
+value. It can be overridden by the user in plugin settings.</p>
+<h3>Hunk</h3>
+<p><strong><code>lines ()</code></strong> - Get an ordered list of <code>Line</code> objects.</p>
+<p><em>Example:</em></p>
+<pre><code>for _, line in ipairs(hunk:lines()) do
+  -- handle each line
+end
+</code></pre>
+<p><strong><code>lexer ()</code></strong> - Get the name of the lexer for the hunk editor.</p>
+<p><em>Example:</em></p>
+<pre><code>-- This plugin only applies to C/C++.
+if hunk:lexer() ~= &quot;cpp&quot; then
+  return
+end
+</code></pre>
+<p><strong><code>tab_width ()</code></strong> - Get the current tab width of the hunk editor.</p>
+<h3>Line</h3>
+<p><strong><code>text ()</code></strong> - Get line text. Includes any end-of-line characters.</p>
+<p><strong><code>origin ()</code></strong> - Get line origin character. Will be one of ' ' (context), '-'
+(deletion), or '+' (addition).</p>
+<p><em>Example:</em></p>
+<pre><code>if line:origin() == &quot;+&quot; then
+  -- handle added line
+end
+</code></pre>
+<p><strong><code>lexemes ()</code></strong> - Get an ordered list of <code>Lexeme</code> objects in the line.</p>
+<p><em>Example:</em></p>
+<pre><code>for _, lexeme in ipairs(line:lexemes()) do
+  -- handle each lexeme in line
+end
+</code></pre>
+<p><strong><code>add_error (key, pos, len [, replacement])</code></strong> - Add an error to the line by key.</p>
+<ul>
+<li><code>pos</code> - the start position of the diagnostic</li>
+<li><code>len</code> - the length of the diagnostic</li>
+<li><code>replacement</code> - replacement text to fix the violation</li>
+</ul>
+<p>If <code>replacement</code> is not given (or nil), the fix button will be disabled. Pass
+the empty string (&quot;&quot;) to remove the given range.</p>
+<p><em>Example:</em></p>
+<pre><code>local len = last:text():len()
+line:add_error(&quot;trailing&quot;, line:text():len() - len, len, &quot;&quot;)
+</code></pre>
+<p><strong><code>column (pos)</code></strong> - Get the tab-expanded column for the given line position.</p>
+<p><strong><code>column_pos (column)</code></strong> - Get the position for the given tab-expanded column.</p>
+<h3>Lexeme</h3>
+<p><strong><code>pos ()</code></strong> - Get the position of the lexeme in the line.</p>
+<p><strong><code>text ()</code></strong> - Get the lexeme text.</p>
+<p><strong><code>kind ()</code></strong> - Get the lexeme kind string.</p>
+<p><strong><code>is_kind (kind)</code></strong> - Check if the lexeme is of the given kind.</p>
+<ul>
+<li><code>kind</code> - the kind string to test</li>
+</ul>
+<p>Lexeme kind will be one of:</p>
+<ul>
+<li>'nothing'</li>
+<li>'whitespace'</li>
+<li>'comment'</li>
+<li>'string'</li>
+<li>'number'</li>
+<li>'keyword'</li>
+<li>'identifier'</li>
+<li>'operator'</li>
+<li>'error'</li>
+<li>'preprocessor'</li>
+<li>'constant'</li>
+<li>'variable'</li>
+<li>'function'</li>
+<li>'class'</li>
+<li>'type'</li>
+<li>'label'</li>
+<li>'regex'</li>
+<li>'embedded'</li>
+</ul>
+<p>Note that not all lexeme kinds are available for all languages. Documents for
+which syntax highlighting is not available will have a single lexeme for each
+line with the kind set to 'nothing'.</p>
+<p><em>Example:</em></p>
+<pre><code>if lexeme:is_kind(&quot;comment&quot;) then
+  -- handle comment
+end
+</code></pre>
+<hr />
+<h2>Example Plugin</h2>
+<pre><code>function options (opts)
+  opts:define_list(&quot;tabs&quot;, &quot;Disallow tabs&quot;, {&quot;In indentation&quot;, &quot;Everywhere&quot;}, 1)
+  opts:define_boolean(&quot;blank&quot;, &quot;Ignore blank lines&quot;, false)
+end
+
+function kinds (kinds, opts)
+  kinds:define_warning(
+    &quot;tabs&quot;,
+    &quot;Tabs&quot;,
+    &quot;tab character added&quot;,
+    &quot;Tab characters are not allowed.&quot;
+  )
+
+  kinds:define_error(
+    &quot;trailing&quot;,
+    &quot;Trailing&quot;,
+    &quot;trailing whitespace added&quot;,
+    &quot;Trailing whitespace is not allowed.&quot;,
+    true -- enabled by default
+  )
+end
+
+function hunk (hunk, opts)
+  if hunk:lexer() == &quot;null&quot; then
+    return
+  end
+
+  local blank = opts:value(&quot;blank&quot;)
+  local indent = opts:value(&quot;tabs&quot;) == 1
+  for _, line in ipairs(hunk:lines()) do
+    local lexemes = line:lexemes()
+    local _, first = next(lexemes)
+    if line:origin() == &quot;+&quot; and first then
+      -- Check for tabs.
+      local text = indent and first:text() or line:text()
+      if text:find(&quot;\t&quot;) then
+        local replacement = text:gsub(&quot;\t&quot;, string.rep(&quot; &quot;, hunk:tab_width()))
+        line:add_error(&quot;tabs&quot;, 1, text:len(), replacement)
+      end
+
+      -- Check for trailing whitespace.
+      local last = lexemes[#lexemes]
+      if last:is_kind(&quot;whitespace&quot;) and (not blank or first ~= last) then
+        local len = last:text():len()
+        local line_len = line:text():gsub(&quot;[\r\n]+$&quot;, &quot;&quot;):len()
+        line:add_error(&quot;trailing&quot;, line_len - len + 1, len, &quot;&quot;)
+      end
+    end
+  end
+end
+</code></pre>
+</body>
+</html>
